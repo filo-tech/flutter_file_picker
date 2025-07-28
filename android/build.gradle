@@ -57,8 +57,10 @@ android {
     }
 }
 
-tasks.withType(JavaCompile).configureEach {
-    options.release = 17
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }
 
 dependencies {
