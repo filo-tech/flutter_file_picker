@@ -37,13 +37,6 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
-    
-    dependencies {
-        implementation 'androidx.core:core:1.15.0'
-        implementation 'androidx.annotation:annotation:1.9.1'
-        implementation "androidx.lifecycle:lifecycle-runtime:2.8.7"
-        implementation "org.apache.tika:tika-core:3.2.0"
-    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
@@ -60,4 +53,8 @@ android {
 }
 dependencies {
     implementation 'androidx.core:core-ktx:1.15.0'
+    implementation 'androidx.core:core:1.15.0'
+    implementation 'androidx.annotation:annotation:1.9.1'
+    implementation "androidx.lifecycle:lifecycle-runtime:2.8.7"
+    implementation "org.apache.tika:tika-core:3.2.0"
 }
