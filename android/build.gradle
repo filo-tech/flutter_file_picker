@@ -26,12 +26,6 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 apply plugin: 'org.jetbrains.kotlin.android'
 
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
-    }
-}
-
 android {
     compileSdk 34
 
@@ -48,6 +42,10 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
+
+        if (JavaVersion.current() < JavaVersion.VERSION_17) {
+            println("WARNING: Current Java version is lower than 17")
+        }
     }
     
     kotlinOptions {
@@ -58,6 +56,11 @@ android {
         namespace 'com.mr.flutter.plugin.filepicker' 
     }
 }
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+}
+
 dependencies {
     implementation 'androidx.core:core-ktx:1.15.0'
     implementation 'androidx.core:core:1.15.0'
