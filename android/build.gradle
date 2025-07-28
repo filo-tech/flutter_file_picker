@@ -44,6 +44,12 @@ android {
         implementation "androidx.lifecycle:lifecycle-runtime:2.8.7"
         implementation "org.apache.tika:tika-core:3.2.0"
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    
     kotlinOptions {
         jvmTarget = '17'
     }
