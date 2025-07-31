@@ -25,7 +25,6 @@ rootProject.allprojects {
 
 apply plugin: 'com.android.library'
 apply plugin: 'org.jetbrains.kotlin.android'
-apply plugin: 'java'
 
 android {
     compileSdk 34
